@@ -1,18 +1,22 @@
 # Release History
 
 # 4.2.5 (2026-02-09)
+
 - Fix feature-flag endpoint retries in gov region (databricks/databricks-sql-python#735 by @samikshya-db)
 - Improve telemetry lifecycle management (databricks/databricks-sql-python#734 by @msrathore-db)
 
 # 4.2.4 (2026-01-07)
+
 - Fixed the exception handler close() on _TelemetryClientHolder (databricks/databricks-sql-python#723 by @msrathore-db)
 - Created util method to normalise http protocol in http path (databricks/databricks-sql-python#724 by @nikhilsuri-db)
 
 # 4.2.3 (2025-12-18)
+
 - added pandas < 2.4.0 support and tests for py 3.14 (databricks/databricks-sql-python#720 by @sreekanth-db)
 - pandas 2.3.3 support for py < 3.14 (databricks/databricks-sql-python#721 by @sreekanth-db)
 
 # 4.2.2 (2025-12-01)
+
 - Change default use_hybrid_disposition to False (databricks/databricks-sql-python#714 by @samikshya-db)
 - Circuit breaker changes using pybreaker (databricks/databricks-sql-python#705 by @nikhilsuri-db)
 - perf: Optimize telemetry latency logging to reduce overhead (databricks/databricks-sql-python#715 by @samikshya-db)
@@ -20,31 +24,38 @@
 - Telemetry is ON by default to track connection stats. (Note : This strictly excludes PII, query text, and results) (databricks/databricks-sql-python#717 by @samikshya-db)
 
 # 4.2.1 (2025-11-20)
+
 - Ignore transactions by default (databricks/databricks-sql-python#711 by @jayantsing-db)
 
 # 4.2.0 (2025-11-14)
+
 - Add multi-statement transaction support (databricks/databricks-sql-python#704 by @jayantsing-db)
 - Add a workflow to parallelise the E2E tests (databricks/databricks-sql-python#697 by @msrathore-db)
 - Bring Python telemetry event model consistent with JDBC (databricks/databricks-sql-python#701 by @nikhilsuri-db)
 
 # 4.1.4 (2025-10-15)
+
 - Add support for Token Federation (databricks/databricks-sql-python#691 by @madhav-db)
 - Add metric view support (databricks/databricks-sql-python#688 by @shivam2680)
 - Increased time limit for long running queries (databricks/databricks-sql-python#686 by @jprakash-db)
 
 # 4.1.3 (2025-09-17)
+
 - Query tags integration (databricks/databricks-sql-python#663 by @sreekanth-db)
 - Add variant support (databricks/databricks-sql-python#560 by @shivam2680)
 
 # 4.1.2 (2025-08-22)
+
 - Streaming ingestion support for PUT operation (databricks/databricks-sql-python#643 by @sreekanth-db)
 - Removed use_threads argument on concat_tables for compatibility with pyarrow<14 (databricks/databricks-sql-python#684 by @jprakash-db)
 
 # 4.1.1 (2025-08-21)
+
 - Add documentation for proxy support (databricks/databricks-sql-python#680 by @vikrantpuppala)
 - Fix compatibility with urllib3<2 and add CI actions to improve dependency checks (databricks/databricks-sql-python#678 by @vikrantpuppala)
 
 # 4.1.0 (2025-08-18)
+
 - Removed Codeowners (databricks/databricks-sql-python#623 by @jprakash-db)
 - Azure Service Principal Credential Provider (databricks/databricks-sql-python#621 by @jprakash-db)
 - Add optional telemetry support to the python connector (databricks/databricks-sql-python#628 by @saishreeeee)
@@ -69,6 +80,7 @@
 - Add kerberos support for proxy auth (databricks/databricks-sql-python#675 by @vikrantpuppala)
 
 # 4.0.5 (2025-06-24)
+
 - Fix: Reverted change in cursor close handling which led to errors impacting users (databricks/databricks-sql-python#613 by @madhav-db)
 
 # 4.0.4 (2025-06-16)
@@ -83,7 +95,8 @@
 # 4.0.3 (2025-04-22)
 
 - Fix: Removed `packaging` dependency in favour of default libraries, for `urllib3` version checks (databricks/databricks-sql-python#547 by @jprakash-db)
-- 
+-
+
 # 4.0.2 (2025-04-01)
 
 - Fix: Relaxed the pin for `python-dateutil` to be `^2.8.0` (databricks/databricks-sql-python#538 by @jprakash-db)
@@ -99,13 +112,13 @@
 
 # 4.0.0 (2025-01-19)
 
-- Split the connector into two separate packages: `databricks-sql-connector` and `databricks-sqlalchemy`. The `databricks-sql-connector` package contains the core functionality of the connector, while the `databricks-sqlalchemy` package contains the SQLAlchemy dialect for the connector. 
+- Split the connector into two separate packages: `databricks-sql-connector` and `databricks-sqlalchemy`. The `databricks-sql-connector` package contains the core functionality of the connector, while the `databricks-sqlalchemy` package contains the SQLAlchemy dialect for the connector.
 - Pyarrow dependency is now optional in `databricks-sql-connector`. Users needing arrow are supposed to explicitly install pyarrow
 
 # 3.7.3 (2025-03-28)
 
-- Fix: Unable to poll small results in execute_async function (databricks/databricks-sql-python#515 by @jprakash-db) 
-- Updated log messages to show the status code and error messages of requests (databricks/databricks-sql-python#511 by @jprakash-db) 
+- Fix: Unable to poll small results in execute_async function (databricks/databricks-sql-python#515 by @jprakash-db)
+- Updated log messages to show the status code and error messages of requests (databricks/databricks-sql-python#511 by @jprakash-db)
 - Fix: Incorrect metadata was fetched in case of queries with the same alias (databricks/databricks-sql-python#505 by @jprakash-db)
 
 # 3.7.2 (2025-01-31)
@@ -126,7 +139,7 @@
 
 # 3.6.0 (2024-10-25)
 
-- Support encryption headers in the cloud fetch request (https://github.com/databricks/databricks-sql-python/pull/460 by @jackyhu-db)
+- Support encryption headers in the cloud fetch request (<https://github.com/databricks/databricks-sql-python/pull/460> by @jackyhu-db)
 
 # 3.5.0 (2024-10-18)
 
@@ -147,7 +160,7 @@
 - Add option to disable SSL verification for CloudFetch links (databricks/databricks-sql-python#414 by @kravets-levko)
 
 Databricks-managed passwords reached end of life on July 10, 2024. Therefore, Basic auth support was removed from
-the library. See https://docs.databricks.com/en/security/auth-authz/password-deprecation.html
+the library. See <https://docs.databricks.com/en/security/auth-authz/password-deprecation.html>
 
 The existing option `_tls_no_verify=True` of `sql.connect(...)` will now also disable SSL cert verification
 (but not the SSL itself) for CloudFetch links. This option should be used as a workaround only, when other ways
@@ -319,7 +332,7 @@ to fix SSL certificate errors didn't work.
 
 ## 2.2.0 (2022-11-15)
 
-- Bump thrift version to address https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13949
+- Bump thrift version to address <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13949>
 - Add support for lz4 compression
 
 ## 2.1.0 (2022-09-30)
@@ -410,4 +423,4 @@ Huge thanks to @dbaxa for contributing this change!
 
 - initial (Experimental) release of pyhive-forked connector
 - Python DBAPI 2.0 (PEP-0249), thrift based
-- see docs for more info: https://docs.databricks.com/dev-tools/python-sql-connector.html
+- see docs for more info: <https://docs.databricks.com/dev-tools/python-sql-connector.html>
